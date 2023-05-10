@@ -1,0 +1,305 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.qrscanner"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.CAMERA" />
+11-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:5:5-64
+11-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:5:22-62
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:6:5-66
+12-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:6:22-64
+13
+14    <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+15    <uses-feature
+15-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:25:5-27:36
+16        android:name="android.hardware.camera"
+16-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:26:9-47
+17        android:required="false" />
+17-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:27:9-33
+18    <uses-feature
+18-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:28:5-30:36
+19        android:name="android.hardware.camera.front"
+19-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:29:9-53
+20        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+20-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:30:9-33
+21    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+22    <uses-feature
+22-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:33:5-35:36
+23        android:name="android.hardware.camera.autofocus"
+23-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:34:9-57
+24        android:required="false" />
+24-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:35:9-33
+25    <uses-feature
+25-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:36:5-38:36
+26        android:name="android.hardware.camera.flash"
+26-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:37:9-53
+27        android:required="false" />
+27-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:38:9-33
+28    <uses-feature
+28-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:39:5-41:36
+29        android:name="android.hardware.screen.landscape"
+29-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:40:9-57
+30        android:required="false" />
+30-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:41:9-33
+31    <uses-feature
+31-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:42:5-44:36
+32        android:name="android.hardware.wifi"
+32-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:43:9-45
+33        android:required="false" />
+33-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:44:9-33
+34
+35    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+35-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:26:5-79
+35-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:26:22-76
+36
+37    <permission
+37-->[androidx.core:core:1.9.0] C:\Users\bharg\.gradle\caches\transforms-3\b20b7208cd1f6eeb7976c5786413711a\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+38        android:name="com.example.qrscanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+38-->[androidx.core:core:1.9.0] C:\Users\bharg\.gradle\caches\transforms-3\b20b7208cd1f6eeb7976c5786413711a\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+39        android:protectionLevel="signature" />
+39-->[androidx.core:core:1.9.0] C:\Users\bharg\.gradle\caches\transforms-3\b20b7208cd1f6eeb7976c5786413711a\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+40
+41    <uses-permission android:name="com.example.qrscanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+41-->[androidx.core:core:1.9.0] C:\Users\bharg\.gradle\caches\transforms-3\b20b7208cd1f6eeb7976c5786413711a\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+41-->[androidx.core:core:1.9.0] C:\Users\bharg\.gradle\caches\transforms-3\b20b7208cd1f6eeb7976c5786413711a\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+42
+43    <application
+43-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:7:5-43:19
+44        android:allowBackup="true"
+44-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:8:9-35
+45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+45-->[androidx.core:core:1.9.0] C:\Users\bharg\.gradle\caches\transforms-3\b20b7208cd1f6eeb7976c5786413711a\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+46        android:dataExtractionRules="@xml/data_extraction_rules"
+46-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:9:9-65
+47        android:debuggable="true"
+48        android:extractNativeLibs="false"
+49        android:fullBackupContent="@xml/backup_rules"
+49-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:10:9-54
+50        android:icon="@mipmap/ic_launcher"
+50-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:11:9-43
+51        android:label="@string/app_name"
+51-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:12:9-41
+52        android:roundIcon="@mipmap/ic_launcher_round"
+52-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:13:9-54
+53        android:supportsRtl="true"
+53-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:14:9-35
+54        android:testOnly="true"
+55        android:theme="@style/Theme.QRScanner" >
+55-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:15:9-47
+56        <activity
+56-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:17:9-28:20
+57            android:name="com.example.qrscanner.MainActivity"
+57-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:18:13-41
+58            android:exported="true"
+58-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:19:13-36
+59            android:screenOrientation="fullSensor" >
+59-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:20:13-51
+60            <meta-data
+60-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:25:13-27:36
+61                android:name="android.app.lib_name"
+61-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:26:17-52
+62                android:value="" />
+62-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:27:17-33
+63        </activity>
+64        <activity
+64-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:29:9-37:20
+65            android:name="com.example.qrscanner.LoginActivity"
+65-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:29:19-48
+66            android:exported="true" >
+66-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:30:13-36
+67            <intent-filter>
+67-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:31:13-35:29
+68                <action android:name="android.intent.action.MAIN" />
+68-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:32:17-69
+68-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:32:25-66
+69
+70                <category android:name="android.intent.category.LAUNCHER" />
+70-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:34:17-77
+70-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:34:27-74
+71            </intent-filter>
+72        </activity>
+73        <activity
+73-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:38:9-42:56
+74            android:name="com.example.qrscanner.CaptureActivity"
+74-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:38:19-50
+75            android:screenOrientation="portrait"
+75-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:39:13-49
+76            android:stateNotNeeded="true"
+76-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:40:13-42
+77            android:theme="@style/zxing_CaptureTheme" />
+77-->C:\Users\bharg\OneDrive\Desktop\QRScanner\QR_Prototype\app\src\main\AndroidManifest.xml:41:13-54
+78        <activity
+78-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:47:9-53:63
+79            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+79-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:48:13-74
+80            android:clearTaskOnLaunch="true"
+80-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:49:13-45
+81            android:screenOrientation="sensorLandscape"
+81-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:50:13-56
+82            android:stateNotNeeded="true"
+82-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:51:13-42
+83            android:theme="@style/zxing_CaptureTheme"
+83-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:52:13-54
+84            android:windowSoftInputMode="stateAlwaysHidden" />
+84-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\bharg\.gradle\caches\transforms-3\7095f557454dc1cf9ff2c8cedcbdda6e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:53:13-60
+85
+86        <service
+86-->[com.google.firebase:firebase-auth-ktx:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\0adfb6c480f28f8bfa43ce5d7112d683\transformed\firebase-auth-ktx-21.3.0\AndroidManifest.xml:8:9-14:19
+87            android:name="com.google.firebase.components.ComponentDiscoveryService"
+87-->[com.google.firebase:firebase-auth-ktx:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\0adfb6c480f28f8bfa43ce5d7112d683\transformed\firebase-auth-ktx-21.3.0\AndroidManifest.xml:9:13-84
+88            android:directBootAware="true"
+88-->[com.google.firebase:firebase-common:20.2.0] C:\Users\bharg\.gradle\caches\transforms-3\01cc42a64b6cee3dbcd657109039d9c0\transformed\firebase-common-20.2.0\AndroidManifest.xml:34:13-43
+89            android:exported="false" >
+89-->[com.google.firebase:firebase-auth-ktx:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\0adfb6c480f28f8bfa43ce5d7112d683\transformed\firebase-auth-ktx-21.3.0\AndroidManifest.xml:10:13-37
+90            <meta-data
+90-->[com.google.firebase:firebase-auth-ktx:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\0adfb6c480f28f8bfa43ce5d7112d683\transformed\firebase-auth-ktx-21.3.0\AndroidManifest.xml:11:13-13:85
+91                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthKtxRegistrar"
+91-->[com.google.firebase:firebase-auth-ktx:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\0adfb6c480f28f8bfa43ce5d7112d683\transformed\firebase-auth-ktx-21.3.0\AndroidManifest.xml:12:17-116
+92                android:value="com.google.firebase.components.ComponentRegistrar" />
+92-->[com.google.firebase:firebase-auth-ktx:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\0adfb6c480f28f8bfa43ce5d7112d683\transformed\firebase-auth-ktx-21.3.0\AndroidManifest.xml:13:17-82
+93            <meta-data
+93-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:69:13-71:85
+94                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+94-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:70:17-109
+95                android:value="com.google.firebase.components.ComponentRegistrar" />
+95-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:71:17-82
+96            <meta-data
+96-->[com.google.firebase:firebase-common-ktx:20.2.0] C:\Users\bharg\.gradle\caches\transforms-3\e8a9e5cfe28a0dbc498176dd49f4a446\transformed\firebase-common-ktx-20.2.0\AndroidManifest.xml:14:13-16:85
+97                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+97-->[com.google.firebase:firebase-common-ktx:20.2.0] C:\Users\bharg\.gradle\caches\transforms-3\e8a9e5cfe28a0dbc498176dd49f4a446\transformed\firebase-common-ktx-20.2.0\AndroidManifest.xml:15:17-113
+98                android:value="com.google.firebase.components.ComponentRegistrar" />
+98-->[com.google.firebase:firebase-common-ktx:20.2.0] C:\Users\bharg\.gradle\caches\transforms-3\e8a9e5cfe28a0dbc498176dd49f4a446\transformed\firebase-common-ktx-20.2.0\AndroidManifest.xml:16:17-82
+99        </service>
+100
+101        <activity
+101-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:29:9-46:20
+102            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+102-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:30:13-80
+103            android:excludeFromRecents="true"
+103-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:31:13-46
+104            android:exported="true"
+104-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:32:13-36
+105            android:launchMode="singleTask"
+105-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:33:13-44
+106            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+106-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:34:13-72
+107            <intent-filter>
+107-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:35:13-45:29
+108                <action android:name="android.intent.action.VIEW" />
+108-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:36:17-69
+108-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:36:25-66
+109
+110                <category android:name="android.intent.category.DEFAULT" />
+110-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:38:17-76
+110-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:38:27-73
+111                <category android:name="android.intent.category.BROWSABLE" />
+111-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:39:17-78
+111-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:39:27-75
+112
+113                <data
+113-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:41:17-44:51
+114                    android:host="firebase.auth"
+114-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:42:21-49
+115                    android:path="/"
+115-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:43:21-37
+116                    android:scheme="genericidp" />
+116-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:44:21-48
+117            </intent-filter>
+118        </activity>
+119        <activity
+119-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:47:9-64:20
+120            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+120-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:48:13-79
+121            android:excludeFromRecents="true"
+121-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:49:13-46
+122            android:exported="true"
+122-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:50:13-36
+123            android:launchMode="singleTask"
+123-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:51:13-44
+124            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+124-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:52:13-72
+125            <intent-filter>
+125-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:53:13-63:29
+126                <action android:name="android.intent.action.VIEW" />
+126-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:36:17-69
+126-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:36:25-66
+127
+128                <category android:name="android.intent.category.DEFAULT" />
+128-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:38:17-76
+128-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:38:27-73
+129                <category android:name="android.intent.category.BROWSABLE" />
+129-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:39:17-78
+129-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:39:27-75
+130
+131                <data
+131-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:41:17-44:51
+132                    android:host="firebase.auth"
+132-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:42:21-49
+133                    android:path="/"
+133-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:43:21-37
+134                    android:scheme="recaptcha" />
+134-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\bharg\.gradle\caches\transforms-3\455d01bb91699a1074671143b3aec16a\transformed\firebase-auth-21.3.0\AndroidManifest.xml:44:21-48
+135            </intent-filter>
+136        </activity>
+137
+138        <provider
+138-->[com.google.firebase:firebase-common:20.2.0] C:\Users\bharg\.gradle\caches\transforms-3\01cc42a64b6cee3dbcd657109039d9c0\transformed\firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
+139            android:name="com.google.firebase.provider.FirebaseInitProvider"
+139-->[com.google.firebase:firebase-common:20.2.0] C:\Users\bharg\.gradle\caches\transforms-3\01cc42a64b6cee3dbcd657109039d9c0\transformed\firebase-common-20.2.0\AndroidManifest.xml:26:13-77
+140            android:authorities="com.example.qrscanner.firebaseinitprovider"
+140-->[com.google.firebase:firebase-common:20.2.0] C:\Users\bharg\.gradle\caches\transforms-3\01cc42a64b6cee3dbcd657109039d9c0\transformed\firebase-common-20.2.0\AndroidManifest.xml:27:13-72
+141            android:directBootAware="true"
+141-->[com.google.firebase:firebase-common:20.2.0] C:\Users\bharg\.gradle\caches\transforms-3\01cc42a64b6cee3dbcd657109039d9c0\transformed\firebase-common-20.2.0\AndroidManifest.xml:28:13-43
+142            android:exported="false"
+142-->[com.google.firebase:firebase-common:20.2.0] C:\Users\bharg\.gradle\caches\transforms-3\01cc42a64b6cee3dbcd657109039d9c0\transformed\firebase-common-20.2.0\AndroidManifest.xml:29:13-37
+143            android:initOrder="100" />
+143-->[com.google.firebase:firebase-common:20.2.0] C:\Users\bharg\.gradle\caches\transforms-3\01cc42a64b6cee3dbcd657109039d9c0\transformed\firebase-common-20.2.0\AndroidManifest.xml:30:13-36
+144
+145        <activity
+145-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\bharg\.gradle\caches\transforms-3\8f63e1f42211ce488b30408ce08dee1b\transformed\play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+146            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+146-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\bharg\.gradle\caches\transforms-3\8f63e1f42211ce488b30408ce08dee1b\transformed\play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+147            android:exported="false"
+147-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\bharg\.gradle\caches\transforms-3\8f63e1f42211ce488b30408ce08dee1b\transformed\play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+148            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+148-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\bharg\.gradle\caches\transforms-3\8f63e1f42211ce488b30408ce08dee1b\transformed\play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+149
+150        <meta-data
+150-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\bharg\.gradle\caches\transforms-3\73ccb84924f5bc4add137bd510ec6c7b\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+151            android:name="com.google.android.gms.version"
+151-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\bharg\.gradle\caches\transforms-3\73ccb84924f5bc4add137bd510ec6c7b\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+152            android:value="@integer/google_play_services_version" />
+152-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\bharg\.gradle\caches\transforms-3\73ccb84924f5bc4add137bd510ec6c7b\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+153
+154        <provider
+154-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bharg\.gradle\caches\transforms-3\bd5b31d3461f659653b4de9443c7971f\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+155            android:name="androidx.startup.InitializationProvider"
+155-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bharg\.gradle\caches\transforms-3\bd5b31d3461f659653b4de9443c7971f\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+156            android:authorities="com.example.qrscanner.androidx-startup"
+156-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bharg\.gradle\caches\transforms-3\bd5b31d3461f659653b4de9443c7971f\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+157            android:exported="false" >
+157-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bharg\.gradle\caches\transforms-3\bd5b31d3461f659653b4de9443c7971f\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+158            <meta-data
+158-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bharg\.gradle\caches\transforms-3\bd5b31d3461f659653b4de9443c7971f\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+159                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+159-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bharg\.gradle\caches\transforms-3\bd5b31d3461f659653b4de9443c7971f\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+160                android:value="androidx.startup" />
+160-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bharg\.gradle\caches\transforms-3\bd5b31d3461f659653b4de9443c7971f\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+161            <meta-data
+161-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\bharg\.gradle\caches\transforms-3\43fdcb1e7b7ed887e67a2585f1ec1deb\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+162                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+162-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\bharg\.gradle\caches\transforms-3\43fdcb1e7b7ed887e67a2585f1ec1deb\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+163                android:value="androidx.startup" />
+163-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\bharg\.gradle\caches\transforms-3\43fdcb1e7b7ed887e67a2585f1ec1deb\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+164        </provider>
+165    </application>
+166
+167</manifest>

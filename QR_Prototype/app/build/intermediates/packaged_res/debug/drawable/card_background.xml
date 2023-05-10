@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Gradient background when view is pressed -->
+    <item android:state_pressed="true">
+        <shape>
+            <gradient
+                android:startColor="@color/pressed_start_color"
+                android:endColor="@color/pressed_end_color"
+                android:angle="270" />
+        </shape>
+    </item>
+
+    <!-- Gradient background when view is focused -->
+    <item android:state_focused="true">
+        <shape>
+            <gradient
+                android:startColor="@color/focused_start_color"
+                android:endColor="@color/focused_end_color"
+                android:angle="270" />
+        </shape>
+    </item>
+
+    <!-- Default gradient background -->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="@color/default_start_color"
+                android:endColor="@color/default_end_color"
+                android:angle="270" />
+        </shape>
+    </item>
+
+</selector>
